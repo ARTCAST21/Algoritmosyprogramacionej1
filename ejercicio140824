@@ -1,0 +1,64 @@
+#Programacion y algoritmos : EJERCICIO 1
+
+## 6.Escribir un programa que lea un entero positivo,$n$ ,introducido por el usuario y después muestre en pantalla la suma de todos los enteros desde 1 hasta n.La suma de los primeros enteros positivos puede ser calculada de la siguiente forma: 
+n(n+1)/2 
+# Solicitarle que ingrese un entero positivo
+n = int(input("Coloque un entero positivo: "))
+
+# Verificando si el número es positivo
+if n > 0:
+    # Calculando la suma de los primeros n enteros positivos usando la fórmula
+    suma = n * (n + 1) // 2
+    
+    # imprimir el resultado
+    print(f"La suma de todos los enteros desde 1 hasta {n} es: {suma}")
+else:
+    print("Por favor, coloque un entero positivo.")
+
+7.Escribir un programa que pida al usuario su peso (en kg) y estatura (en metros), calcule el índice de masa corporal y lo almacene en una variable, y muestre por pantalla la frase Tu índice de masa corporal  es (IMC) donde el índice de masa corporal calculado redondeando con dos decimales.
+# pedir al usuario su peso en kilogramos
+peso = float(input("Introduce tu peso en kg: "))
+
+# pedir al usuario su estatura en metros
+estatura = float(input("Introduce tu estatura en metros: "))
+
+# Calcundo el índice de masa corporal (IMC)
+imc = peso / (estatura ** 2)
+
+# Redondeando el IMC a dos decimales
+imc = round(imc, 2)
+
+# imprimir el resultado
+print(f"Tu índice de masa corporal es {imc}")
+
+8.Escribir un programa que pida al usuario dos números enteros y muestre por pantalla la n entre m da un cociente c y un resto r donde n y m son los números introducidos por el usuario,c y r son el cociente y el resto de la división entera respectivamente.
+# solicitar al usuario que ingrese dos números enteros
+n = int(input("Introduce el primer número entero (n): "))
+m = int(input("Introduce el segundo número entero (m): "))
+
+# Calcular el cociente de la división entera
+cociente = n // m
+
+# Calcular el residuo (módulo) de la división entera
+residuo = n % m
+
+# Mostrar el resultado
+print(f"{n} entre {m} da un cociente de {cociente} y un residuo de {residuo}.")
+
+9.Escribir un programa que pregunte al usuario una cantidad a invertir, el interés anual y el número de años, y muestre por pantalla el capital obtenido en la inversión.
+# Pedir al usuario la cantidad a invertir, el interés anual, y el número de años
+cantidad_invertida = float(input("Introduce la cantidad a invertir expresada como una cantidad sin puntos ni comas(n): "))
+interes_anual = float(input("Introduce el interés anual sin el porcentaje: "))
+anios = int(input("Introduce el número de años (k): "))
+
+# Calcular el capital obtenido usando la fórmula del interés compuesto simple
+capital_obtenido = cantidad_invertida * (1 + (interes_anual / 100) * anios)
+
+# Imprimir el resultado
+print(f"El capital obtenido tras {anios} años es: {capital_obtenido:.2f}")
+
+10.Una juguetería tiene mucho éxito en dos de sus productos: payasos y muñecas. Suele hacer venta por correo y la empresa de logística les cobra por peso de cada paquete así que deben calcular el peso de los payasos y muñecas que saldrán en cada paquete a demanda. Cada payaso pesa 112 g y cada muñeca 75 g. Escribir un programa que lea el número de payasos y muñecas vendidos en el último pedido y calcule el peso total del paquete que será enviado.
+
+11.Imagina que acabas de abrir una nueva cuenta de ahorros que te ofrece el 4% de interés al año. Estos ahorros debido a intereses, que no se cobran hasta finales de año, se te añaden al balance final de tu cuenta de ahorros. Escribir un programa que comience leyendo la cantidad de dinero depositada en la cuenta de ahorros, introducida por el usuario. Después el programa debe calcular y mostrar por pantalla la cantidad de ahorros tras el primer, segundo y tercer años. Redondear cada cantidad a dos decimales.
+
+12.Una panadería vende barras de pan a 3.49 Pesos cada una. El pan que no es el día tiene un descuento del 60.Escribir un programa que comience leyendo el número de barras vendidas que no son del día. Después el programa debe mostrar el precio habitual de una barra de pan, el descuento que se le hace por no ser fresca y el coste final total.
